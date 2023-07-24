@@ -37,6 +37,6 @@ class MongoDBConnection(ExperimentalBaseConnection[MongoClient]):
     def get_all_documents(self, db_name: str, collection_name: str) -> pd.DataFrame:
         connection = self.connection()
         collection = connection[db_name][collection_name]
-        cursor = collection.find({})
-        df = pd.DataFrame(list(cursor))
+        cursor = [i for i in collection.find({})]
+        df = pd.DataFrame.from_dict(list(cursor),orient='columns')
         return df
