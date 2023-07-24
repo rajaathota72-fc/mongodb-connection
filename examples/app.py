@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_mongodb.mongodb_connection import MongoDBConnection
-import pandas as pd
+
+
 def main():
     # Read secrets from secrets.toml
     st.secrets.load_manifest("examples/secrets.toml")
