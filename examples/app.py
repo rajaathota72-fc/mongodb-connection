@@ -3,7 +3,7 @@ from streamlit_mongodb.mongodb_connection import MongoDBConnection
 import pandas as pd
 def main():
     # Read secrets from secrets.toml
-    st.secrets.load_manifest("secrets.toml")
+    st.secrets.load_manifest("examples/secrets.toml")
     mongo_secrets = st.secrets["mongodb"]
 
     # Establish a connection with MongoDB
