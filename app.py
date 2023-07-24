@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_mongodb.mongodb_connection import MongoDBConnection
 def main():
     # Read secrets from secrets.toml
-    st.secrets.load_manifest("examples/secrets.toml")
+    st.secrets.load_manifest("secrets.toml")
     mongo_secrets = st.secrets["mongodb"]
 
     # Establish a connection with MongoDB
