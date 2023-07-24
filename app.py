@@ -11,7 +11,7 @@ def main():
     st.title("MongoDB Note-taking App")
 
     # Input fields to add a new note or update an existing note
-    note_id = st.text_input("Note ID (Optional, for updates)")
+    note_id = st.text_input("Note ID")
     title = st.text_input("Title")
     content = st.text_area("Content")
 
@@ -19,13 +19,11 @@ def main():
     if st.button("Save Note"):
         if title and content:
             if note_id:
-                update_data = {"title": title, "content": content}
+                update_data = {"_id":note_id,"title": title, "content": content}
                 conn.update_document("Notebook","Notes", note_id, update_data)
                 st.success("Note updated successfully!")
             else:
-                document = {"title": title, "content": content}
-                conn.insert_document("Notebook","Notes", document)
-                st.success("Note added successfully!")
+                st.warning("Enter note id")
 
     # Show all notes
     st.subheader("All Notes:")
