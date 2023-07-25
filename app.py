@@ -79,7 +79,7 @@ Happy Streamlit and MongoDB integration! 🚀📊
             st.subheader("Read : Fetch all notes and present in a table")
             notes_df = conn.get_all_documents("Notebook", "Notes")
             if len(notes_df) > 0:
-                notes_df += 1
+                notes_df.index += 1
                 st.dataframe(notes_df)
             else:
                 st.warning('No notes found.')
