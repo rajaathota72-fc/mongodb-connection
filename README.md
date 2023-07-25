@@ -1,6 +1,6 @@
 # MongoDB Extension for Streamlit
 
-This is a Streamlit extension that provides a simple and convenient way to connect to a MongoDB database. The extension is built as an extension to `ExperimentalBaseConnection`, allowing you to establish a connection to your MongoDB instance and perform CRUD operations with ease.
+This repo consists of  Streamlit Mongodb connection  that provides a simple and convenient way to connect to a MongoDB database for streamlit apps. The connection is built as an extension to `ExperimentalBaseConnection`, allowing you to establish a connection to your MongoDB instance and perform CRUD operations with ease.
 
 ## Installation
 
