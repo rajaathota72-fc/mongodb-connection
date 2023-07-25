@@ -4,7 +4,7 @@ from streamlit_mongodb.mongodb_connection import MongoDBConnection
 def main():
     # Set page config and title
     st.set_page_config(page_title="Streamlit MongoDB Connection", page_icon="🚀")
-    st.markdown("<h2 style='text-align:center;background-color:#262730;border-radius: 10px;padding: 10px;'>Streamlit hackathon - MongoDB connection</h2>",unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align:center;background-color:#F0F2F6;border-radius: 10px;padding: 10px;'>Streamlit hackathon - MongoDB connection</h2>",unsafe_allow_html=True)
 
     # Set options
     option = option_menu("",["About - MongoDB connection","Example - Note taking app"] , icons=["database-add","terminal"], default_index=1,orientation='horizontal',styles={"nav-link-selected": {"background-color": "#67A6AA"}})
